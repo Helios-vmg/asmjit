@@ -320,7 +320,7 @@ public:
   //! Set an extra operand that will be used by the next instruction (architecture specific).
   ASMJIT_INLINE void setExtraOp(const Operand_& extraOp) noexcept { _extraOp = extraOp; }
   //! Reset an extra operand that will be used by the next instruction (architecture specific).
-  ASMJIT_INLINE void resetExtraOp() noexcept { _extraOp.setSignature(0); }
+  ASMJIT_INLINE void resetExtraOp() noexcept { _extraOp.reset(); }
 
   //! Get annotation of the next instruction.
   ASMJIT_INLINE const char* getInlineComment() const noexcept { return _inlineComment; }
